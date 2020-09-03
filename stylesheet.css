@@ -1,0 +1,270 @@
+body {
+  background-color: rgb(44, 44, 44);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+/*title-header*/
+.header-container {
+  font-family: "Century Gothic", sans-serif;
+  width: 100%;
+  top: 2%;
+  margin-top: 10px;
+  position: fixed;
+  text-align: center;
+}
+#title-up {
+  font-size: 40px;
+  width: 100%;
+  margin: 0%;
+  color: rgb(255, 100, 113);
+}
+.line-shrink {
+  animation-name: animate-border;
+  animation-duration: 0.5s;
+  height: 4px;
+  content: " ";
+  background-color: rgb(255, 100, 113);
+  position: absolute;
+  top: 0%;
+  transition: all 0.5s ease;
+}
+@keyframes animate-border {
+  from {
+    width: 0%;
+    left: 50%;
+  }
+  to {
+    left: 0%;
+    width: 100%;
+  }
+}
+#title-down {
+  font-size: 20px;
+  margin: 4px 0%;
+  padding: 0;
+  color: white;
+}
+/*search-section*/
+.search-box {
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  background: rgb(255, 255, 255);
+  height: 40px;
+  border-radius: 40px;
+  padding: 3px;
+}
+#search-btn {
+  font-family: Impact, sans-serif;
+  font-size: 5px;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url("search.png") no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+#search-txt {
+  width: 75%;
+  border: none;
+  background: none;
+  outline: none;
+  padding-left: 20px;
+  line-height: 40px;
+}
+/*total-container*/
+.world {
+  font-family: "Century Gothic", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  top: 30%;
+  width: 100%;
+  position: fixed;
+}
+#total-box {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 32px;
+  position: fixed;
+  width: 100%;
+  top: 35%;
+  text-align: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+#total-box > p {
+  width: 100%;
+  margin: 10px 0%;
+  position: relative;
+}
+#total-cases {
+  color: rgb(255, 100, 100);
+}
+#total-deaths {
+  color: rgb(209, 117, 252);
+}
+#total-recov {
+  color: rgb(104, 250, 213);
+}
+#total-cases::before {
+  content: "Total cases: ";
+  color: white;
+  font-size: 14px;
+}
+#total-deaths::before {
+  content: "Total deaths: ";
+  font-size: 14px;
+  color: white;
+}
+#total-recov::before {
+  content: "Total recovery: ";
+  font-size: 14px;
+  color: white;
+}
+
+/*data-container*/
+.container {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container > p {
+  font-size: 16px;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  color: rgba(39, 39, 39, 0.418);
+  margin: 10px;
+}
+.data-container {
+  width: 80%;
+  height: 90%;
+  margin: 10px 0;
+  text-align: center;
+  font-family: "Century Gothic", sans-serif;
+}
+.data-container > div {
+  margin: 10px 2px;
+  color: rgb(43, 43, 43);
+}
+#data-country {
+  width: 100%;
+  font-size: 1.3em;
+  background-color: rgb(192, 194, 194);
+  color: rgb(65, 65, 65);
+  border-radius: 10px;
+}
+#data-cases {
+  color: rgb(255, 100, 100);
+}
+#data-cases::before {
+  content: "cases: ";
+}
+#data-Tcases::before {
+  content: "today cases: ";
+}
+#data-deaths {
+  color: rgb(209, 117, 252);
+}
+#data-deaths::before {
+  content: "deaths: ";
+}
+#data-Tdeaths::before {
+  content: "today deaths: ";
+}
+#data-recovered {
+  color: rgb(104, 250, 213);
+}
+#data-recovered::before {
+  content: "recovered: ";
+}
+#data-active::before {
+  content: "active: ";
+}
+#data-critical::before {
+  content: "critical: ";
+}
+#data-test::before {
+  content: "test: ";
+}
+#data-cases,
+#data-deaths, 
+#data-recovered{
+  width: 100%;
+  font-size: 2em;
+}
+#data-cases::before,
+#data-Tcases::before,
+#data-deaths::before,
+#data-Tdeaths::before,
+#data-recovered::before,
+#data-active::before,
+#data-critical::before,
+#data-test::before {
+  font-size: 0.6em;
+  color: rgb(146, 146, 146);
+}
+#data-Tcases,
+#data-Tdeaths,
+#data-active,
+#data-critical,
+#data-test{
+  font-size: 1.4em;
+  color: rgb(87, 88, 88);
+}
+@media only screen and (min-width: 1024px){
+  #title-up{
+    font-size: 60px;
+  }
+  .search-box{
+    top: 23%;
+    left: 27%;
+    width: 45%;
+  }
+  .world{
+    top: 38%;
+  }
+  #total-box{
+    flex-direction: row;
+    top: 45%;
+    left: 15%;
+    width: 70%;
+  }
+  .container{
+    top: 60%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .data-container{
+    width: 60%;
+  }
+  #data-country{
+    font-size: 2.5em;
+  }
+  #data-cases,
+  #data-deaths, 
+  #data-recovered,
+  #data-Tcases,
+  #data-Tdeaths,
+  #data-active,
+  #data-critical,
+  #data-test{
+    font-size: 2em;
+    float: left;
+    width: 50%;
+    margin: 20px 0;
+  }
+}
