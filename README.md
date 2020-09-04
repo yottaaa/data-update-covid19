@@ -2,4 +2,4 @@
 
 I use [COVID19 API](https://corona.lmao.ninja/) to get the data
 
-You can visit my [https://data-update-covid19.herokuapp.com/](https://data-update-covid19.herokuapp.com/)
+You can visit my [Web App](https://data-update-covid19.herokuapp.com/)
